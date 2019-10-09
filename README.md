@@ -11,7 +11,6 @@ I create a makefile to install my environement with apt.
 
 - gnome-shell
 - gnome-terminal
-- git
 - vim
 - nano
 - htop
