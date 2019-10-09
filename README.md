@@ -5,6 +5,7 @@ I create a makefile to install my environement with apt.
 
 - git (to clone the project)
 - make (to execute the makefile)
+- sudo (to grant the user root privilege)
 
 ### The installation file includes :
 
