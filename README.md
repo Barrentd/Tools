@@ -10,7 +10,10 @@ I create a makefile to install my environement with apt.
 ## To use sudo :
 
 Use the usermod command to add the user to the sudo group.
+
+```shell
 usermod -aG sudo username
+```
 
 ### The installation file includes :
 
