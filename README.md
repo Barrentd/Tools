@@ -7,7 +7,7 @@ I create a makefile to install my environement with apt.
 - make (to execute the makefile)
 - sudo (to grant the user root privilege)
 
-## To use sudo :
+#### To use sudo :
 
 Use the usermod command to add the user to the sudo group.
 
