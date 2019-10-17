@@ -27,3 +27,6 @@ usermod -aG sudo username
 - firefox
 - keepassx
 - terminator
+
+### Author :
+- Barrentd
