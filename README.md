@@ -1,5 +1,5 @@
 # Tools
-I create a makefile to install my environement with apt.
+I create a makefile to install my development environment with apt.
 
 ### Dependency required :
 
