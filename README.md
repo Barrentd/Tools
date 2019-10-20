@@ -17,6 +17,7 @@ usermod -aG sudo username
 
 ### The installation file includes :
 
+#### function installenvironment :
 - gnome-shell
 - gnome-terminal
 - vim
@@ -27,6 +28,10 @@ usermod -aG sudo username
 - firefox
 - keepassx
 - terminator
+
+#### function installdocker :
+- Docker
+- Docker-compose
 
 ### Author :
 - Barrentd
