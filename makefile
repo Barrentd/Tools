@@ -31,8 +31,8 @@ installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 	@( \
 	sudo apt install -y \
 	virtualbox-guest-x11 \
-  virtualbox-guest-utils \
-  virtualbox-guest-dkms; \
+  	virtualbox-guest-utils \
+  	virtualbox-guest-dkms; \
 	)
 
 installatom: ## Install Atom
