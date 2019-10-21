@@ -3,9 +3,9 @@ installenvironment: ## Install dependencies
 	@( \
 	sudo apt update; \
 	sudo apt install -y \
+	gdm3 \
 	gnome-shell \
 	gnome-terminal \
-	git \
 	vim \
 	nano \
 	htop \
