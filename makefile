@@ -11,7 +11,7 @@ installenvironment: ## Install dependencies
 	htop \
 	curl \
 	nautilus \
-	firefox \
+	firefox-esr \
 	keepassx \
 	terminator; \
 	)
