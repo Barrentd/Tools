@@ -38,7 +38,7 @@ installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 installatom: ## Install Atom
 	$(info --> Install Atom)
 	@( \
-	wget -O atom-amd64.deb https://atom.io/download/deb; \
+	sudo wget -O atom-amd64.deb https://atom.io/download/deb; \
 	sudo dpkg -i atom-amd64.deb; \
 	sudo apt-get -f install -y; \
 	rm atom-amd64.deb; \
