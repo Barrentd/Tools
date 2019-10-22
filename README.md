@@ -9,7 +9,7 @@ I created a makefile to install my development environment with apt.
 
 #### To use sudo :
 
-Use the usermod command to add the user to the sudo group.
+Use this command to add the user to the sudo group.
 
 ```bash
 sudo adduser <username> sudo
