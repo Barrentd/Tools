@@ -12,7 +12,7 @@ I created a makefile to install my development environment with apt.
 Use the usermod command to add the user to the sudo group.
 
 ```bash
-usermod -aG sudo username
+sudo adduser <username> sudo
 ```
 
 ### The installation file includes :
@@ -35,7 +35,7 @@ usermod -aG sudo username
 - Docker-compose
 
 #### installvirtualboxfeatures :
-If you use linux in virtualBox.
+If you use Debian/Ubuntu based Linux distributions in virtualBox.
 - virtualbox-guest-x11 
 - virtualbox-guest-utils 
 - virtualbox-guest-dkms
