@@ -18,6 +18,7 @@ usermod -aG sudo username
 ### The installation file includes :
 
 #### installenvironment :
+- gdm3
 - gnome-shell
 - gnome-terminal
 - vim
