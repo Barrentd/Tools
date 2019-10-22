@@ -29,6 +29,7 @@ installdocker: ## Install Docker
 installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 	$(info --> Install VirtuaBox features)
 	@( \
+	sudo sh -c 'echo deb http://deb.debian.org/debian/ sid main >> /etc/apt/sources.list'
 	sudo apt install -y \
 	virtualbox-guest-x11 \
   	virtualbox-guest-utils \
