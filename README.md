@@ -11,7 +11,7 @@ I created a makefile to install my development environment with apt.
 
 Use this command to add the user to the sudo group.
 
-```bash
+```console
 sudo adduser <username> sudo
 ```
 
