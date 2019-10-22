@@ -35,7 +35,7 @@ usermod -aG sudo username
 - Docker-compose
 
 #### installvirtualboxfeatures :
-If you use debian in a virtualBox.
+If you use linux in virtualBox.
 - virtualbox-guest-x11 
 - virtualbox-guest-utils 
 - virtualbox-guest-dkms
