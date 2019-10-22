@@ -17,7 +17,7 @@ usermod -aG sudo username
 
 ### The installation file includes :
 
-#### function installenvironment :
+#### installenvironment :
 - gnome-shell
 - gnome-terminal
 - vim
@@ -29,17 +29,17 @@ usermod -aG sudo username
 - keepassx
 - terminator
 
-#### function installdocker :
+#### installdocker :
 - Docker
 - Docker-compose
 
-#### function installvirtualboxfeatures :
+#### installvirtualboxfeatures :
 If you use debian in a virtualBox.
 - virtualbox-guest-x11 
 - virtualbox-guest-utils 
 - virtualbox-guest-dkms
 
-#### function installatom :
+#### installatom :
 - Atom
 
 ### Author :
