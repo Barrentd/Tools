@@ -33,9 +33,9 @@ installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 	sudo wget -O virtualbox-guest-dkms.deb http://ftp.fr.debian.org/debian/pool/contrib/v/virtualbox/virtualbox-guest-dkms_4.3.36-dfsg-1+deb8u1_all.deb; \
         sudo apt install -y xserver-xorg-core; \
 	sudo dpkg -i \
-	virtualbox-guest-x11.deb \
 	virtualbox-guest-utils.deb \
 	virtualbox-guest-dkms.deb; \
+	virtualbox-guest-x11.deb \
         sudo apt-get -f install -y; \
         rm -f virtualbox-guest-x11.deb virtualbox-guest-utils.deb virtualbox-guest-dkms.deb; \
 	)
