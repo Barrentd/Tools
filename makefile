@@ -28,11 +28,6 @@ installdocker: ## Install Docker
 installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 	$(info --> Install VirtuaBox features)
 	@( \
-	sudo sh -c 'echo deb http://ftp.de.debian.org/debian jessie main contrib >> /etc/apt/sources.list'; \
-	sudo apt install -y \
-	virtualbox-guest-utils \
-	virtualbox-guest-dkms \
-	virtualbox-guest-x11; \
 	)
 
 installatom: ## Install Atom
