@@ -9,6 +9,7 @@ installenvironment: ## Install dependencies
 	nano \
 	htop \
 	curl \
+	net-tools \
 	nautilus \
 	firefox-esr \
 	keepassx \
