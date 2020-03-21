@@ -15,6 +15,11 @@ Use this command to add the user to the sudo group.
 sudo adduser <username> sudo
 ```
 
+Then, use this command to reload the sudoers file.
+```console
+sudo service sudo restart
+```
+
 ### The installation file includes :
 
 #### installenvironment :
