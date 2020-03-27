@@ -29,6 +29,10 @@ installdocker: ## Install Docker
 installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 	$(info --> Install VirtuaBox features)
 	@( \
+	sudo apt update -y && apt upgrade \
+	sudo apt install dkms linux-headers-$(uname -r) build-essential \
+	dpkg -l | grep -E "dkms|linux-headers-$(uname -r)|build-essential" \
+	sudo sh /media/cdrom0/VBoxLinuxAdditions.run; \
 	)
 
 installatom: ## Install Atom
