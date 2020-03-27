@@ -3,7 +3,6 @@ installenvironment: ## Install dependencies
 	@( \
 	sudo apt update; \
 	sudo apt install -y \
-	gnome-shell \
 	gnome-terminal \
 	vim \
 	nano \
