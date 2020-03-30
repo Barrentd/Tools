@@ -23,9 +23,6 @@ sudo service sudo restart
 ### The installation file includes :
 
 #### installenvironment :
-- gdm3
-- gnome-shell
-- gnome-terminal
 - vim
 - nano
 - htop
