@@ -1,4 +1,3 @@
-#!/bin/bash
 # A Simple Shell Script to install my development environment
 # Barrentd
 
