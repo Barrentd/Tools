@@ -1,6 +1,6 @@
 #!/bin/bash
-#A Simple Shell Script to install my development environment
-#Barrentd
+# A Simple Shell Script to install my development environment
+# Barrentd
 
 installenvironment: ## Install dependencies
 	$(info --> Install dependencies)
