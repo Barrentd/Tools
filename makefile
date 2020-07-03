@@ -16,7 +16,25 @@ installenvironment: ## Install dependencies
 	keepassx \
 	terminator; \
 	)
-
+	
+installenvironmentwithchoice: ## Install dependencies with the possibility to choose the dependencie
+	@( \
+	sudo apt update; \
+	array = (whiptail --title "Check list example" --checklist \
+	"Choose the software(s) you want to install" 25 78 11 \
+	"gnome-terminal" "" OFF \
+	"vim" "" OFF \
+	"nano" "" OFF \
+	"htop" "" OFF \
+	"curl" "" OFF \
+	"net-tools" "" OFF \
+	"nautilus" "" OFF \
+	"firefox-esr" "" OFF \
+	"keepassx" "" OFF \
+	"code" "" OFF \
+	"terminator" "" OFF); \
+	echo array ; \
+	)
 
 installdocker: ## Install Docker
 	$(info --> Install Docker)
@@ -25,7 +43,6 @@ installdocker: ## Install Docker
 	docker \
 	docker-compose; \
   )
-
 
 installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
 	$(info --> Install VirtuaBox features)
