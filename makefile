@@ -1,12 +1,20 @@
 # !/bin/bash
-# A Simple Shell Script to install my development environment
+# A Simple makefile to install my development environment
 # Barrentd
 
+main: ## For Gnome
+	$(info --> Install dependencies and removeGnomeSoft)
+	@( \
+	make installenvironment; \
+	make removeGnomeSoft; \
+	)
+
 installenvironment: ## Install dependencies
-	$(info --> Install dependencies)
+	$(info -->  Install dependencies)
 	@( \
 	sudo apt update; \
 	sudo apt install -y \
+	gnome \
 	gnome-terminal \
 	vim \
 	nano \
@@ -21,7 +29,7 @@ installenvironment: ## Install dependencies
 	)
 
 installenvironmentwithchoice: ## Install dependencies with the possibility to choose the dependencie
-    $(info --> Install dependencies you choose)
+	$(info --> Install dependencies with choice)
 	@( \
 	sudo apt update; \
 	array = ( whiptail --title "Check list example" --checklist \
