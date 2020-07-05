@@ -1,6 +1,9 @@
 # Tools
 I created a makefile to install my development environment with apt.
 
+### Author :
+- Barrentd : https://github.com/Barrentd/
+
 ### Dependency required :
 
 - git (to clone the project)
@@ -44,6 +47,3 @@ If you use Debian/Ubuntu based Linux distributions in virtualBox.
 
 #### installatom :
 - Atom
-
-### Author :
-- Barrentd
