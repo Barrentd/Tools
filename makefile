@@ -2,7 +2,7 @@
 # A Simple makefile to install a development environment
 
 main: ## Install gnome, install the dependencies and remove the useless gnome software
-	$(info --> Install dependencies and removeGnomeSoft)
+	$(info --> Install Gnome, dependencies and removeGnomeSoft)
 	@( \
 	make installgnome; \
 	make installenvironment; \
@@ -29,7 +29,6 @@ installenvironment: ## Install dependencies
 	net-tools \
 	firefox-esr \
 	keepassx \
-	code \
 	terminator \
 	ssh; \
 	)
@@ -76,6 +75,15 @@ installatom: ## Install Atom
 	sudo dpkg -i atom-amd64.deb; \
 	sudo apt-get -f install -y; \
 	rm atom-amd64.deb; \
+	)
+
+installvscode: ## Install VScode
+	$(info --> Install VScode)
+	@( \
+	sudo wget -O code.deb https://go.microsoft.com/fwlink/?LinkID=760868; \
+	sudo dpkg -i code.deb; \
+	sudo apt-get -f install -y; \
+	rm code.deb; \
 	)
 
 removeGnomeSoft: ## Remove gnome useless software who came with the installation of gnome (game, utilities)
