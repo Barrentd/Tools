@@ -1,5 +1,12 @@
 # !/bin/bash
 # A Simple makefile to install a development environment
+.DEFAULT_GOAL:=help
+SHELL:=/bin/bash
+
+help:  ## Display this help
+	@awk 'BEGIN {FS = ":.*##"; printf "\nUsage:\n  make \033[36m\033[0m\n"} /^[a-zA-Z_-]+:.*?##/ { printf "  \033[36m%-15s\033[0m %s\n", $$1, $$2 } /^##@/ { printf "\n\033[1m%s\033[0m\n", substr($$0, 5) } ' $(MAKEFILE_LIST)
+
+##@ Install
 
 main: ## Install gnome, install the dependencies and remove the useless gnome software
 	$(info --> Install Gnome, dependencies and removeGnomeSoft)
@@ -9,20 +16,22 @@ main: ## Install gnome, install the dependencies and remove the useless gnome so
 	make removeGnomeSoft; \
 	)
 
-
-installgnome: ## Install the distro gnome
-	$(info -->  Install gnome)
+gnome: ## Install the distro gnome
+	$(info -->  Install Gnome)
 	@( \
 	sudo apt update; \
 	sudo apt install -y gnome; \
 	)
 
-installenvironment: ## Install dependencies
+##@ Utilities 
+
+env: ## Install dependencies
 	$(info -->  Install dependencies)
 	@( \
 	sudo apt update; \
 	sudo apt install -y \
 	vim \
+	wget \
 	nano \
 	htop \
 	curl \
@@ -33,7 +42,7 @@ installenvironment: ## Install dependencies
 	ssh; \
 	)
 
-installenvironmentwithchoice: ## Install dependencies with the possibility to choose the dependencie
+pickenv: ## Install dependencies with the possibility to choose the dependencie
 	$(info --> Install dependencies with choice)
 	@( \
 	sudo apt update; \
@@ -49,12 +58,18 @@ installenvironmentwithchoice: ## Install dependencies with the possibility to ch
 	"firefox-esr" "" OFF \
 	"keepassx" "" OFF \
 	"code" "" OFF \
-	"terminator" "" OFF); \
+	"terminator" "" OFF ); \
 	echo array ; \
 	)
 
+vboxguest: ## Install VirtualBox graphic and clipboard
+	$(info --> Install VirtuaBox features)
+	@( \
+	)
 
-installdocker: ## Install Docker
+##@ Docker
+
+docker: ## Install Docker
 	$(info --> Install Docker)
 	@( \
 	sudo apt install -y \
@@ -62,31 +77,29 @@ installdocker: ## Install Docker
 	docker-compose; \
 	)
 
+##@ Editors
 
-installvirtualboxfeatures: ## Install VirtualBox graphic and clipboard
-	$(info --> Install VirtuaBox features)
-	@( \
-	)
-
-installatom: ## Install Atom
+atom: ## Install Atom
 	$(info --> Install Atom)
 	@( \
 	sudo wget -O atom-amd64.deb https://atom.io/download/deb; \
 	sudo dpkg -i atom-amd64.deb; \
 	sudo apt-get -f install -y; \
-	rm atom-amd64.deb; \
+	rm -f atom-amd64.deb; \
 	)
 
-installvscode: ## Install VScode
+vscode: ## Install VScode
 	$(info --> Install VScode)
 	@( \
 	sudo wget -O code.deb https://go.microsoft.com/fwlink/?LinkID=760868; \
 	sudo dpkg -i code.deb; \
 	sudo apt-get -f install -y; \
-	rm code.deb; \
+	rm -f code.deb; \
 	)
 
-removeGnomeSoft: ## Remove gnome useless software who came with the installation of gnome (game, utilities)
+##@ Remove
+
+rmvGnomeSoft: ## Remove gnome useless software who came with the installation of gnome (game, utilities)
 	$(info --> Remove gnome useless software)
 	@( \
 	sudo apt remove --purge -y libreoffice* \
