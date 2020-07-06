@@ -1,12 +1,19 @@
 # !/bin/bash
-# A Simple makefile to install my development environment
-# Barrentd
+# A Simple makefile to install a development environment
 
-main: ## For Gnome
+main:
 	$(info --> Install dependencies and removeGnomeSoft)
 	@( \
 	make installenvironment; \
 	make removeGnomeSoft; \
+	)
+
+
+installgnome:
+	$(info -->  Install gnome)
+	@( \
+	sudo apt update; \
+	sudo apt install -y gnome; \
 	)
 
 installenvironment: ## Install dependencies
@@ -14,18 +21,16 @@ installenvironment: ## Install dependencies
 	@( \
 	sudo apt update; \
 	sudo apt install -y \
-	gnome \
-	gnome-terminal \
 	vim \
 	nano \
 	htop \
 	curl \
 	net-tools \
-	nautilus \
 	firefox-esr \
 	keepassx \
 	code \
-	terminator; \
+	terminator \
+	ssh; \
 	)
 
 installenvironmentwithchoice: ## Install dependencies with the possibility to choose the dependencie
