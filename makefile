@@ -1,15 +1,16 @@
 # !/bin/bash
 # A Simple makefile to install a development environment
 
-main:
+main: ## Install gnome, install the dependencies and remove the useless gnome software
 	$(info --> Install dependencies and removeGnomeSoft)
 	@( \
+	make installgnome; \
 	make installenvironment; \
 	make removeGnomeSoft; \
 	)
 
 
-installgnome:
+installgnome: ## Install the distro gnome
 	$(info -->  Install gnome)
 	@( \
 	sudo apt update; \
