@@ -6,7 +6,7 @@ I created a makefile to install my development environment with apt.
 
 ### Dependency required :
 
-- git (to clone the project)
+- git (to clone this project)
 - make (to execute the makefile)
 - sudo (to grant the user root privilege)
 
