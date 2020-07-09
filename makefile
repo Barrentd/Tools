@@ -11,9 +11,9 @@ help:  ## Display this help
 main: ## Install gnome, install the dependencies and remove the useless gnome software
 	$(info --> Install Gnome, dependencies and removeGnomeSoft)
 	@( \
-	make installgnome; \
-	make installenvironment; \
-	make removeGnomeSoft; \
+	make gnome; \
+	make env; \
+	make rmvGnomeSoft; \
 	)
 
 gnome: ## Install the distro gnome
