@@ -36,7 +36,6 @@ env: ## Install dependencies
 	htop \
 	curl \
 	net-tools \
-	firefox-esr \
 	keepassx \
 	terminator \
 	ssh; \
