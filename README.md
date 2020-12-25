@@ -32,7 +32,7 @@ sudo service sudo restart
 - curl
 - nautilus
 - firefox
-- keepassx
+- keepassxc
 - terminator
 
 #### installdocker :
