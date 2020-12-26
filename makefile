@@ -36,7 +36,7 @@ env: ## Install softwares and useful packages
 	htop \
 	curl \
 	net-tools \
-	keepassx \
+	keepassxc \
 	terminator \
 	ssh; \
 	)
