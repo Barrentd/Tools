@@ -25,8 +25,8 @@ gnome: ## Install the distro gnome
 
 ##@ Utilities 
 
-env: ## Install dependencies
-	$(info -->  Install dependencies)
+env: ## Install softwares and useful packages
+	$(info -->  Install software)
 	@( \
 	sudo apt update; \
 	sudo apt install -y \
@@ -41,8 +41,8 @@ env: ## Install dependencies
 	ssh; \
 	)
 
-pickenv: ## Install dependencies with the possibility to choose the dependencie
-	$(info --> Install dependencies with choice)
+pickenv: ## Install software with the possibility to choose what to install
+	$(info --> Install software with choice)
 	@( \
 	sudo apt update; \
 	array = ( whiptail --title "Check list example" --checklist \
@@ -74,6 +74,17 @@ docker: ## Install Docker
 	sudo apt install -y \
 	docker \
 	docker-compose; \
+	)
+
+##@ Python
+
+python: ## Install Python3
+	$(info --> Install Python3)
+	@( \
+	sudo apt install -y \
+	python3-apt \
+	python3-pip \
+	python3-virtualenv; \
 	)
 
 ##@ Editors
