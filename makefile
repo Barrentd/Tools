@@ -76,6 +76,18 @@ docker: ## Install Docker
 	docker-compose; \
 	)
 
+##@ Ansible
+
+ansible: ## Install Ansible
+	$(info --> Install Ansible)
+	@( \
+	make python \
+	sudo apt-get install sshpass
+	python -m virtualenv ansible \
+	source ansible/bin/activate \
+	python -m install ansible; \
+	)
+
 ##@ Python
 
 python: ## Install Python3

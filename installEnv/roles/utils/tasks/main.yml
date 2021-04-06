@@ -1,0 +1,9 @@
+---
+- name: Install soft
+  become: yes
+  apt:
+    name: "{{ item }}"
+    update_cache: yes
+    state: latest
+  loop: "{{ softwares }}"
+  tags: [system]

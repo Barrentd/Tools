@@ -1,0 +1,11 @@
+---
+- name: Ansible install soft playbook
+  hosts: localhost
+
+  vars_files:
+    - vars/default.yml
+
+  roles:
+    # - utils
+    - installDocker
+    - testDocker

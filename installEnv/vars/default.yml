@@ -1,0 +1,35 @@
+---
+softwares:
+  [
+    "vim",
+    "nano",
+    "htop",
+    "curl",
+    "wget",
+    "nautilus",
+    "firefox",
+    "keepassxc",
+    "terminator",
+    "net-tools",
+  ]
+
+docker:
+  [
+  "docker",
+  "docker-compose",
+  ]
+
+user:
+  [
+  "ubtzind",
+  ]
+
+groups:
+  [
+  "docker",
+  ]
+
+create_containers: 4
+default_container_name: docker
+default_container_image: ubuntu
+default_container_command: sleep 1d
