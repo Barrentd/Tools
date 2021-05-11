@@ -34,6 +34,7 @@ sudo service sudo restart
 - firefox
 - keepassxc
 - terminator
+- tree
 
 #### installdocker :
 - Docker
