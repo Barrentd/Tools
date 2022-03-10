@@ -31,34 +31,25 @@ env: ## Install softwares and useful packages
 	sudo apt update; \
 	sudo apt install -y \
 	vim \
-	wget \
 	nano \
-	htop \
-	curl \
-	net-tools \
 	keepassxc \
-	terminator \
-	ssh; \
+	terminator; \
 	)
 
-pickenv: ## Install software with the possibility to choose what to install
-	$(info --> Install software with choice)
+utils: ## Install utils packages
+	$(info -->  Install utils)
 	@( \
 	sudo apt update; \
-	array = ( whiptail --title "Check list example" --checklist \
-	"Choose the software(s) you want to install" 25 78 11 \
-	"gnome-terminal" "" OFF \
-	"vim" "" OFF \
-	"nano" "" OFF \
-	"htop" "" OFF \
-	"curl" "" OFF \
-	"net-tools" "" OFF \
-	"nautilus" "" OFF \
-	"firefox-esr" "" OFF \
-	"keepassx" "" OFF \
-	"code" "" OFF \
-	"terminator" "" OFF ); \
-	echo array ; \
+	sudo apt install -y \
+	net-tools \
+	ncdu \
+	neofetch \
+	tree \
+	wget \
+	curl \
+	telnet \
+	htop \
+	ssh; \
 	)
 
 vboxguest: ## Install VirtualBox graphic and clipboard
@@ -85,7 +76,7 @@ ansible: ## Install Ansible
 	sudo apt install sshpass; \
 	python3 -m virtualenv ansible; \
 	source ansible/bin/activate; \
-	python -m pip install ansible; \
+	python3 -m pip install ansible; \
 	)
 
 ##@ Python
