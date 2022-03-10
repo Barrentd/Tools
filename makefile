@@ -25,7 +25,7 @@ gnome: ## Install the distro gnome
 
 ##@ Utilities 
 
-env: ## Install softwares and useful packages
+env: ## Install softwares packages
 	$(info -->  Install software)
 	@( \
 	sudo apt update; \
@@ -45,6 +45,7 @@ utils: ## Install utils packages
 	ncdu \
 	neofetch \
 	tree \
+	zip \
 	wget \
 	curl \
 	telnet \
@@ -57,7 +58,7 @@ vboxguest: ## Install VirtualBox graphic and clipboard
 	@( \
 	)
 
-##@ Docker
+##@ DevOps
 
 docker: ## Install Docker
 	$(info --> Install Docker)
@@ -67,8 +68,6 @@ docker: ## Install Docker
 	docker-compose; \
 	)
 
-##@ Ansible
-
 ansible: ## Install Ansible
 	$(info --> Install Ansible)
 	@( \
@@ -77,6 +76,16 @@ ansible: ## Install Ansible
 	python3 -m virtualenv ansible; \
 	source ansible/bin/activate; \
 	python3 -m pip install ansible; \
+	)
+
+terraform: ## Install Terraform
+	$(info --> Install Terraform)
+	@( \
+	wget https://releases.hashicorp.com/terraform/1.1.7/terraform_1.1.7_linux_amd64.zip; \
+	sudo unzip terraform_1.1.7_linux_amd64.zip; \
+	sudo mv terraform /usr/local/bin/; \
+	terraform version; \
+	rm -f terraform_1.1.7_linux_amd64.zip; \
 	)
 
 ##@ Python
