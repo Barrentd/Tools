@@ -81,11 +81,11 @@ docker: ## Install Docker
 ansible: ## Install Ansible
 	$(info --> Install Ansible)
 	@( \
-	make python \
-	sudo apt-get install sshpass
-	python -m virtualenv ansible \
-	source ansible/bin/activate \
-	python -m install ansible; \
+	make python; \
+	sudo apt install sshpass; \
+	python3 -m virtualenv ansible; \
+	source ansible/bin/activate; \
+	python -m pip install ansible; \
 	)
 
 ##@ Python
