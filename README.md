@@ -25,6 +25,37 @@ sudo service sudo restart
 
 ### The installation file includes :
 
+#### help :
+
+Usage:
+  make 
+  help             Display this help
+
+Install
+  main             Install gnome, install the dependencies and remove the useless gnome software
+  gnome            Install the distro gnome
+
+Utilities 
+  env              Install softwares and useful packages
+  utils            Install utils packages
+  vboxguest        Install VirtualBox graphic and clipboard
+
+Docker
+  docker           Install Docker
+
+Ansible
+  ansible          Install Ansible
+
+Python
+  python           Install Python3
+
+Editors
+  atom             Install Atom
+  vscode           Install VScode
+
+Remove
+  rmvGnomeSoft     Remove gnome useless software who came with the installation of gnome (game, utilities)
+
 #### installenvironment :
 - vim
 - nano
