@@ -88,6 +88,12 @@ terraform: ## Install Terraform
 	rm -f terraform_1.1.7_linux_amd64.zip; \
 	)
 
+azure-cli: ## Install Azure-cli
+	$(info --> Install Azure-cli)
+	@( \
+	curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash \
+	)
+
 ##@ Python
 
 python: ## Install Python3
@@ -97,6 +103,19 @@ python: ## Install Python3
 	python3-apt \
 	python3-pip \
 	python3-virtualenv; \
+	)
+
+##@ Go
+
+go: ## Install Go
+	$(info --> Install Go)
+	@( \
+	sudo wget https://go.dev/dl/go1.17.8.linux-amd64.tar.gz; \
+	sudo tar -C /usr/local -xzf go1.17.8.linux-amd64.tar.gz; \
+	export PATH=$PATH:/usr/local/go/bin; \
+	source ~/.bashrc; \
+	rm -f go1.17.8.linux-amd64.tar.gz; \
+	go version; \
 	)
 
 ##@ Editors
